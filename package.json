@@ -1,0 +1,31 @@
+{
+  "name": "script-atomic-onload",
+  "version": "1.0.0",
+  "description": "Call onload immediately after your asynchronously loaded script has executed, allowing no other code to run in between – even in IE.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exogen/script-atomic-onload.git"
+  },
+  "keywords": [
+    "script",
+    "onload",
+    "async",
+    "sync",
+    "atomic",
+    "callback"
+  ],
+  "author": "Brian Beck <exogen@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/exogen/script-atomic-onload/issues"
+  },
+  "homepage": "https://github.com/exogen/script-atomic-onload#readme",
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "mocha": "^2.3.3"
+  }
+}

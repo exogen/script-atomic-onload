@@ -27,13 +27,13 @@ and such to it. Eventually your `noConflict` gets called, but it’s too late �
 the plugins are attached to the wrong instance.
 
 **There may be other script loading libraries that already do this!**
-[Sorin Iclanzan’s scriptload](https://github.com/RealGeeks/scriptload) looks
-promising, for instance. But this particular implementation has been
-battle-tested on many high-traffic, script-laden sites in production. Just
-because you’ve never had an issue with your script loader, doesn’t mean it’s
-correct! One particular issue that this loader resolved for us was
-only ever seen on one site, and only sometimes (when certain race conditions
-were met).
+[Sorin Iclanzan’s scriptload](https://github.com/RealGeeks/scriptload) and
+[RequireJS](http://requirejs.org/) have implementations that appear similar, for
+instance. But this particular implementation has been battle-tested on many
+high-traffic, script-laden sites in production. Just because you’ve never had
+an issue with your script loader, doesn’t mean it’s correct! One particular
+issue that this loader resolved for us was only ever seen on one site, and only
+sometimes (when certain race conditions were met).
 
 ## Usage
 

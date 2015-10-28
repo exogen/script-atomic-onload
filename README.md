@@ -1,5 +1,9 @@
 # script-atomic-onload
 
+```bash
+npm install script-atomic-onload
+```
+
 ## An asynchronous script loader with atomic/synchronous `onload` behavior everywhere
 
 Yes, calling `onload` *immediately* (aka synchronously or atomically) after a

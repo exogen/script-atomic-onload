@@ -22,7 +22,7 @@ jQuery from one of the many CDNs that publish it. But since your widget might
 be used on sites that already use jQuery, you need to use `jQuery.noConflict` to
 keep yours isolated. The problem comes when you load your version of jQuery,
 and before its `onload` callback gets called, other code on the site can see it
-and, mistaking it for a different instance of jQuery, starts attaching plugins
+and, mistaking it for a different instance of jQuery, start attaching plugins
 and such to it. Eventually your `noConflict` gets called, but it’s too late –
 the plugins are attached to the wrong instance.
 

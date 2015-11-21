@@ -36,7 +36,10 @@ function loadScript(src, callback, thisValue) {
             inserted = false,
             done = false;
 
-        var stateChange = function() {
+        // Attach the handler before setting src, otherwise we might
+        // miss events (consider that IE could fire them synchronously
+        // upon setting src, for example).
+        script.onreadystatechange = function() {
             if (!inserted && isReady[script.readyState]) {
                 inserted = true;
                 // Get the first script element, we're just going to use it
@@ -62,12 +65,8 @@ function loadScript(src, callback, thisValue) {
                   callback.call(thisValue);
                 }
             }
-        };
 
-        // Attach the handler before setting src, otherwise we might
-        // miss events (consider that IE could fire them synchronously
-        // upon setting src, for example).
-        script.onreadystatechange = stateChange;
+        };
 
         // Since we're not appending the script to the DOM yet, the
         // reference to our script element might get garbage collected

@@ -10,7 +10,7 @@ Yes, calling `onload` *immediately* (aka synchronously or atomically) after a
 `<script>` has executed is the correct and officially defined behavior. So
 what’s the problem? **Internet Explorer.** Below version 10, getting this
 behavior requires you jump through some hoops, and *many* script loaders get it
-wrong or just don’t care. Even [jQuery’s `getScript`](https://api.jquery.com/jquery.getscript/)
+wrong or just don’t try. Even [jQuery’s `getScript`](https://api.jquery.com/jquery.getscript/)
 does not make this guarantee, documenting that “The callback is fired once the
 script has been loaded but not necessarily executed.”
 
@@ -20,11 +20,11 @@ callback can be potentially disastrous. For instance, let’s say you make a
 widget people can load on their site, and it relies on jQuery. You want to load
 jQuery from one of the many CDNs that publish it. But since your widget might
 be used on sites that already use jQuery, you need to use `jQuery.noConflict` to
-keep yours isolated. The problem comes when you load your version of jQuery,
-and before its `onload` callback gets called, other code on the site can see it
+keep yours isolated. The problem comes when you load your version of jQuery in
+IE, and before its `onload` callback fires, other code on the site can see it
 and, mistaking it for a different instance of jQuery, start attaching plugins
 and such to it. Eventually your `noConflict` gets called, but it’s too late –
-the plugins are attached to the wrong instance.
+the plugins are attached to the wrong jQuery instance.
 
 **There may be other script loading libraries that already do this!**
 [Sorin Iclanzan’s scriptload](https://github.com/RealGeeks/scriptload) and

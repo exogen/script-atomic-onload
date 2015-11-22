@@ -1,9 +1,12 @@
-var expect = require("expect.js");
+var expect = require("expect.js"); // Can't use Chai due to IE8.
 var loadScript = require("../loader");
 
 describe("loadScript", function() {
   it("runs the callback after execution", function(done) {
+    // Sometimes IE (via Sauce Labs) loads these scripts VERY slowly.
     this.timeout(300000);
+    // Could be done with an async library or Promises, but this works fine
+    // for now.
     var count = 0;
     function checkDone() {
       if (++count === 10) {
@@ -18,7 +21,7 @@ describe("loadScript", function() {
         expect(window.jQuery).to.be.a('function');
         // Remove the global.
         var jQuery = window.jQuery.noConflict(true);
-        // Shouldn't be an instance we've previously loaded.
+        // Shouldn't be an instance we've previously loaded and marked.
         expect(jQuery.FOO).to.be(undefined);
         // Should be the expected version.
         expect(jQuery.fn.jquery).to.equal(version);

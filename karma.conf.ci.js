@@ -49,6 +49,9 @@ module.exports = function(config) {
       'SL_IE11'
     ],
     sauceLabs: {
+      testName: 'Script Loader Tests',
+      tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
+      startConnect: false,
       recordVideo: false
     },
     captureTimeout: 120000,

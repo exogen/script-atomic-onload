@@ -19,5 +19,10 @@ env:
     - TEST_LOADER=labjs
     - TEST_LOADER=jquery
 
+matrix:
+  allow_failures:
+    - env: TEST_LOADER=labjs
+    - env: TEST_LOADER=jquery
+
 script:
   - npm run test-ci

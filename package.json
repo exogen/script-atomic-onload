@@ -39,6 +39,7 @@
     "karma-webpack": "^1.7.0",
     "mocha": "^2.3.3",
     "phantomjs": "^1.9.18",
+    "script-loader": "^0.6.1",
     "webpack": "^1.12.8"
   }
 }

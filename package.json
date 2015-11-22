@@ -4,7 +4,8 @@
   "description": "Call onload immediately after your asynchronously loaded script has executed, allowing no other code to run in between – even in IE.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "karma start",
+    "test-ci": "karma start ./karma.conf.ci.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,19 @@
   },
   "homepage": "https://github.com/exogen/script-atomic-onload#readme",
   "devDependencies": {
-    "chai": "^3.4.0",
-    "mocha": "^2.3.3"
+    "expect.js": "^0.3.1",
+    "karma": "^0.13.15",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-mocha": "^0.2.1",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-phantomjs-shim": "^1.1.2",
+    "karma-safari-launcher": "^0.1.1",
+    "karma-sauce-launcher": "^0.3.0",
+    "karma-sourcemap-loader": "^0.3.6",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.3.3",
+    "phantomjs": "^1.9.18",
+    "webpack": "^1.12.8"
   }
 }

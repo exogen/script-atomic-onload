@@ -7,6 +7,7 @@ We test some competing loaders for atomic `onload` behavior in our build matrix:
 [![jQuery Status][jquery_img]][trav_site]
 [![LABjs Status][labjs_img]][trav_site]
 [![RequireJS Status][requirejs_img]][trav_site]
+[![scriptload Status][scriptload_img]][trav_site]
 
 # script-atomic-onload
 
@@ -36,14 +37,14 @@ and, mistaking it for a different instance of jQuery, start attaching plugins
 and such to it. Eventually your `noConflict` gets called, but it’s too late –
 the plugins are attached to the wrong jQuery instance.
 
-**There may be other script loading libraries that already do this!**
-[Sorin Iclanzan’s scriptload](https://github.com/RealGeeks/scriptload) and
-[RequireJS](http://requirejs.org/) have implementations that appear similar, for
-instance. But this particular implementation has been battle-tested on many
-high-traffic, script-laden sites in production. Just because you’ve never had
-an issue with your script loader, doesn’t mean it’s correct! One particular
-issue that this loader resolved for us was only ever seen on one site, and only
-sometimes (when certain race conditions were met).
+**There may be other script loading libraries that already do this, but I’ve
+never found one.** If I did, I’d add it to the CI build matrix and you’d see
+its results above. This particular implementation may not be widely adopted,
+but it has been battle-tested on many high-traffic, script-laden sites in
+production. Just because you’ve never had an issue with your script loader,
+doesn’t mean it’s correct! One particular issue that this loader resolved was
+only ever seen on one site, and only sometimes (when certain race conditions
+were met).
 
 ## Usage
 
@@ -73,8 +74,9 @@ loadScript('https://code.jquery.com/jquery-1.11.3.min.js', function() {
 ```
 
 [trav_img]: https://img.shields.io/travis/exogen/script-atomic-onload/master.svg
-[headjs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=jquery&label=HeadJS&bust=1
-[jquery_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=headjs&label=jQuery&bust=1
-[labjs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=labjs&label=LABjs&bust=1
-[requirejs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=requirejs&label=RequireJS&bust=1
+[headjs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=jquery&label=HeadJS
+[jquery_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=headjs&label=jQuery
+[labjs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=labjs&label=LABjs
+[requirejs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=requirejs&label=RequireJS
+[scriptload_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=scriptload&label=scriptload
 [trav_site]: https://travis-ci.org/exogen/script-atomic-onload

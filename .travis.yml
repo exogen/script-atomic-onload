@@ -23,13 +23,16 @@ env:
     - TEST_LOADER=jquery
     - TEST_LOADER=labjs
     - TEST_LOADER=requirejs
+    - TEST_LOADER=scriptload
 
 matrix:
+  fast_finish: true
   allow_failures:
     - env: TEST_LOADER=headjs
     - env: TEST_LOADER=labjs
     - env: TEST_LOADER=jquery
     - env: TEST_LOADER=requirejs
+    - env: TEST_LOADER=scriptload
 
 script:
   - npm run test-ci

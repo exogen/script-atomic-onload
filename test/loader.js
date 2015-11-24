@@ -5,6 +5,7 @@
 //  - jquery (uses `jQuery.getScript(src, callback)`)
 //  - labjs (uses `$LAB.script(src).wait(callback)`)
 //  - requirejs (uses `require([src], callback)`)
+//  - scriptload (uses `scriptload([src], callback)`)
 
 // Don't require `./loader-env` here; it needs to be a simple expression that
 // webpack can evaluate.

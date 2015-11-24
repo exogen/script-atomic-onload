@@ -1,3 +1,13 @@
+[![Build Status][trav_img]][trav_site]
+
+Your script loader probably doesn’t have the callback behavior you’re expecting.
+We test some competing loaders in our build matrix:
+
+[![HeadJS Status][headjs_img]][trav_site]
+[![jQuery Status][jquery_img]][trav_site]
+[![LABjs Status][labjs_img]][trav_site]
+[![RequireJS Status][requirejs_img]][trav_site]
+
 # script-atomic-onload
 
 ```bash
@@ -61,3 +71,10 @@ loadScript('https://code.jquery.com/jquery-1.11.3.min.js', function() {
   // page has extended or modified.
 });
 ```
+
+[trav_img]: https://img.shields.io/travis/exogen/script-atomic-onload/master.svg
+[headjs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=jquery&label=HeadJS
+[jquery_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=headjs&label=jQuery
+[labjs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=labjs&label=LABjs
+[requirejs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=requirejs&label=RequireJS
+[trav_site]: https://travis-ci.org/exogen/script-atomic-onload

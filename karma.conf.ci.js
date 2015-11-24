@@ -40,18 +40,28 @@ module.exports = function(config) {
         browserName: 'internet explorer',
         version: '11',
         platform: 'Windows 10'
+      },
+      SL_Edge: {
+        base: 'SauceLabs',
+        browserName: 'MicrosoftEdge',
+        version: '20.10240',
+        platform: 'Windows 10'
       }
     },
     browsers: [
+      'SL_Chrome',
+      'SL_Firefox',
+      'SL_Safari',
       'SL_IE8',
       'SL_IE9',
       'SL_IE10',
-      'SL_IE11'
+      'SL_IE11',
+      'SL_Edge'
     ],
     sauceLabs: {
-      testName: 'Script Loader Tests',
+      testName: 'Script Loader Tests: ' + require('./test/loader-env'),
       tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
-      startConnect: false,
+      startConnect: process.env.TRAVIS !== "true",
       recordVideo: false
     },
     captureTimeout: 120000,

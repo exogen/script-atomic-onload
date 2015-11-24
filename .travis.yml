@@ -1,7 +1,10 @@
 language: node_js
 
 node_js:
+ - "0.10"
  - "0.12"
+ - "4.2"
+ - "5.0"
 
 # Use container-based Travis infrastructure.
 sudo: false
@@ -16,13 +19,17 @@ env:
 
   matrix:
     - TEST_LOADER=script-atomic-onload
-    - TEST_LOADER=labjs
+    - TEST_LOADER=headjs
     - TEST_LOADER=jquery
+    - TEST_LOADER=labjs
+    - TEST_LOADER=requirejs
 
 matrix:
   allow_failures:
+    - env: TEST_LOADER=headjs
     - env: TEST_LOADER=labjs
     - env: TEST_LOADER=jquery
+    - env: TEST_LOADER=requirejs
 
 script:
   - npm run test-ci

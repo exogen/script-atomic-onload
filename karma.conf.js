@@ -1,7 +1,5 @@
 var webpack = require("webpack");
 
-var TEST_LOADER = process.env.TEST_LOADER || "script-atomic-onload";
-
 module.exports = function(config) {
   config.set({
 
@@ -67,13 +65,6 @@ module.exports = function(config) {
     // how many browser should be started simultanous
     concurrency: 2,
 
-    webpack: {
-      devtool: 'inline-source-map',
-      plugins: [
-        new webpack.DefinePlugin({
-          'process.env.TEST_LOADER': JSON.stringify(TEST_LOADER)
-        })
-      ]
-    }
+    webpack: require('./test/webpack.config')
   })
 }

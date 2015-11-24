@@ -1,7 +1,7 @@
 [![Build Status][trav_img]][trav_site]
 
 Your script loader probably doesn’t have the callback behavior you’re expecting.
-We test some competing loaders in our build matrix:
+We test some competing loaders for atomic `onload` behavior in our build matrix:
 
 [![HeadJS Status][headjs_img]][trav_site]
 [![jQuery Status][jquery_img]][trav_site]

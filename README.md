@@ -8,6 +8,7 @@ We test some competing loaders for atomic `onload` behavior in our build matrix:
 [![LABjs Status][labjs_img]][trav_site]
 [![RequireJS Status][requirejs_img]][trav_site]
 [![scriptload Status][scriptload_img]][trav_site]
+[![yepnope Status][yepnope_img]][trav_site]
 
 # script-atomic-onload
 
@@ -79,4 +80,5 @@ loadScript('https://code.jquery.com/jquery-1.11.3.min.js', function() {
 [labjs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=labjs&label=LABjs&bust=1
 [requirejs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=requirejs&label=RequireJS&bust=1
 [scriptload_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=scriptload&label=scriptload&bust=1
+[yepnope_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=yepnope&label=yepnope&bust=1
 [trav_site]: https://travis-ci.org/exogen/script-atomic-onload

@@ -26,6 +26,11 @@ module.exports = {
         test: /require\.js$/,
         include: path.join(__dirname, "vendor"),
         loader: "exports?requirejs"
+      },
+      {
+        test: /yepnope-2\.0\.0\.js$/,
+        include: path.join(__dirname, "vendor"),
+        loader: "exports?window.yepnope"
       }
     ]
   },

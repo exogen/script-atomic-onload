@@ -1,9 +1,7 @@
 language: node_js
 
 node_js:
- - "0.10"
  - "0.12"
- - "4.2"
  - "5.0"
 
 # Use container-based Travis infrastructure.
@@ -24,6 +22,7 @@ env:
     - TEST_LOADER=labjs
     - TEST_LOADER=requirejs
     - TEST_LOADER=scriptload
+    - TEST_LOADER=yepnope
 
 matrix:
   fast_finish: true
@@ -33,6 +32,7 @@ matrix:
     - env: TEST_LOADER=jquery
     - env: TEST_LOADER=requirejs
     - env: TEST_LOADER=scriptload
+    - env: TEST_LOADER=yepnope
 
 script:
   - npm run test-ci

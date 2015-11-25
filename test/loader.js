@@ -4,7 +4,9 @@
 //  - headjs (uses `head.load(src, callback)`)
 //  - jquery (uses `jQuery.getScript(src, callback)`)
 //  - labjs (uses `$LAB.script(src).wait(callback)`)
+//  - load-script
 //  - requirejs (uses `require([src], callback)`)
+//  - script-load
 //  - scriptload (uses `scriptload([src], callback)`)
 
 // Don't require `./loader-env` here; it needs to be a simple expression that

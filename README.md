@@ -6,7 +6,9 @@ We test some competing loaders for atomic `onload` behavior in our build matrix:
 [![HeadJS Status][headjs_img]][trav_site]
 [![jQuery Status][jquery_img]][trav_site]
 [![LABjs Status][labjs_img]][trav_site]
+[![load-script Status][load-script_img]][trav_site]
 [![RequireJS Status][requirejs_img]][trav_site]
+[![script-load Status][script-load_img]][trav_site]
 [![scriptload Status][scriptload_img]][trav_site]
 [![yepnope Status][yepnope_img]][trav_site]
 
@@ -78,7 +80,9 @@ loadScript('https://code.jquery.com/jquery-1.11.3.min.js', function() {
 [headjs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=jquery&label=HeadJS&bust=1
 [jquery_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=headjs&label=jQuery&bust=1
 [labjs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=labjs&label=LABjs&bust=1
+[load-script_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=load-script&label=load-script&bust=1
 [requirejs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=requirejs&label=RequireJS&bust=1
 [scriptload_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=scriptload&label=scriptload&bust=1
+[script-load_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=script-load&label=script-load&bust=1
 [yepnope_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=yepnope&label=yepnope&bust=1
 [trav_site]: https://travis-ci.org/exogen/script-atomic-onload

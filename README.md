@@ -74,9 +74,9 @@ loadScript('https://code.jquery.com/jquery-1.11.3.min.js', function() {
 ```
 
 [trav_img]: https://img.shields.io/travis/exogen/script-atomic-onload/master.svg
-[headjs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=jquery&label=HeadJS
-[jquery_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=headjs&label=jQuery
-[labjs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=labjs&label=LABjs
-[requirejs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=requirejs&label=RequireJS
-[scriptload_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=scriptload&label=scriptload
+[headjs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=jquery&label=HeadJS&bust=1
+[jquery_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=headjs&label=jQuery&bust=1
+[labjs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=labjs&label=LABjs&bust=1
+[requirejs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=requirejs&label=RequireJS&bust=1
+[scriptload_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=scriptload&label=scriptload&bust=1
 [trav_site]: https://travis-ci.org/exogen/script-atomic-onload

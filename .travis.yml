@@ -17,10 +17,13 @@ env:
 
   matrix:
     - TEST_LOADER=script-atomic-onload
+    - TEST_LOADER=getscript
     - TEST_LOADER=headjs
     - TEST_LOADER=jquery
+    - TEST_LOADER=kist-loader
     - TEST_LOADER=labjs
     - TEST_LOADER=load-script
+    - TEST_LOADER=loads-js
     - TEST_LOADER=requirejs
     - TEST_LOADER=script-load
     - TEST_LOADER=scriptload
@@ -29,10 +32,13 @@ env:
 matrix:
   fast_finish: true
   allow_failures:
+    - env: TEST_LOADER=getscript
     - env: TEST_LOADER=headjs
     - env: TEST_LOADER=jquery
+    - env: TEST_LOADER=kist-loader
     - env: TEST_LOADER=labjs
     - env: TEST_LOADER=load-script
+    - env: TEST_LOADER=loads-js
     - env: TEST_LOADER=requirejs
     - env: TEST_LOADER=script-load
     - env: TEST_LOADER=scriptload

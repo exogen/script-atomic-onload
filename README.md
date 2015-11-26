@@ -1,16 +1,26 @@
 [![Build Status][trav_img]][trav_site]
 
-Your script loader probably doesn’t have the callback behavior you’re expecting.
-We test some competing loaders for atomic `onload` behavior in our build matrix:
+Your script loader probably doesn’t have the callback behavior you want.
+We test some competing loaders for atomic `onload` behavior in our build matrix.
+
+Using a popular library?
 
 [![HeadJS Status][headjs_img]][trav_site]
 [![jQuery Status][jquery_img]][trav_site]
 [![LABjs Status][labjs_img]][trav_site]
-[![load-script Status][load-script_img]][trav_site]
 [![RequireJS Status][requirejs_img]][trav_site]
+[![yepnope Status][yepnope_img]][trav_site]
+
+Or perhaps you’re using one of these lesser-known packages?
+
+[![getscript Status][getscript_img]][trav_site]
+[![kist-loader Status][kist-loader_img]][trav_site]
+[![load-script Status][load-script_img]][trav_site]
+[![loads-js Status][loads-js_img]][trav_site]
 [![script-load Status][script-load_img]][trav_site]
 [![scriptload Status][scriptload_img]][trav_site]
-[![yepnope Status][yepnope_img]][trav_site]
+
+Sorry. Introducing…
 
 # script-atomic-onload
 
@@ -77,12 +87,15 @@ loadScript('https://code.jquery.com/jquery-1.11.3.min.js', function() {
 ```
 
 [trav_img]: https://img.shields.io/travis/exogen/script-atomic-onload/master.svg
-[headjs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=jquery&label=HeadJS&bust=1
-[jquery_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=headjs&label=jQuery&bust=1
-[labjs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=labjs&label=LABjs&bust=1
-[load-script_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=load-script&label=load-script&bust=1
-[requirejs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=requirejs&label=RequireJS&bust=1
-[scriptload_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=scriptload&label=scriptload&bust=1
-[script-load_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=script-load&label=script-load&bust=1
-[yepnope_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=yepnope&label=yepnope&bust=1
+[getscript_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=getscript&label=getscript
+[headjs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=headjs&label=HeadJS
+[jquery_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=jquery&label=jQuery
+[kist-loader_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=kist-loader&label=kist-loader
+[labjs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=labjs&label=LABjs
+[load-script_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=load-script&label=load-script
+[loads-js_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=loads-js&label=loads-js
+[requirejs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=requirejs&label=RequireJS
+[scriptload_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=scriptload&label=scriptload
+[script-load_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=script-load&label=script-load
+[yepnope_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=yepnope&label=yepnope
 [trav_site]: https://travis-ci.org/exogen/script-atomic-onload

@@ -1,3 +1,5 @@
+var TEST_LOADER = require('./test/loader-env');
+
 module.exports = function(config) {
   require("./karma.conf")(config);
   config.set({
@@ -59,10 +61,13 @@ module.exports = function(config) {
       'SL_Edge'
     ],
     sauceLabs: {
-      testName: 'Script Loader Tests: ' + require('./test/loader-env'),
+      testName: 'Script Loader Tests: ' + TEST_LOADER,
       tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
       startConnect: process.env.TRAVIS !== "true",
-      recordVideo: false
+      recordVideo: false,
+      customData: {
+        loader: TEST_LOADER
+      }
     },
     captureTimeout: 120000,
     browserNoActivityTimeout: 300000

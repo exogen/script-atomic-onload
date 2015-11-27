@@ -64,10 +64,7 @@ module.exports = function(config) {
       testName: 'Script Loader Tests: ' + TEST_LOADER,
       tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
       startConnect: process.env.TRAVIS !== "true",
-      recordVideo: false,
-      customData: {
-        loader: TEST_LOADER
-      }
+      tags: [`TEST_LOADER=${TEST_LOADER}`]
     },
     captureTimeout: 120000,
     browserNoActivityTimeout: 300000

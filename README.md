@@ -11,7 +11,7 @@ Using a popular library?
 [![RequireJS Status][requirejs_img]][trav_site]
 [![yepnope Status][yepnope_img]][trav_site]
 
-Or perhaps you’re using one of these lesser-known packages?
+Or perhaps one of these lesser-known packages?
 
 [![getscript Status][getscript_img]][trav_site]
 [![kist-loader Status][kist-loader_img]][trav_site]
@@ -20,7 +20,9 @@ Or perhaps you’re using one of these lesser-known packages?
 [![script-load Status][script-load_img]][trav_site]
 [![scriptload Status][scriptload_img]][trav_site]
 
-Sorry. Introducing…
+Sorry.
+
+Introducing…
 
 # script-atomic-onload
 
@@ -86,6 +88,25 @@ loadScript('https://code.jquery.com/jquery-1.11.3.min.js', function() {
 });
 ```
 
+## I don’t support old IE anyway, am I safe?
+
+Maybe! Have a look at the results from our build matrix:
+
+Library                  | Browser Status
+------------------------ | --------------
+**script-atomic-onload** | ![script-atomic-onload Browser Status][script-atomic-onload_browsers_img]
+HeadJS                   | ![HeadJS Browser Status][headjs_browsers_img]
+jQuery                   | ![jQuery Browser Status][jquery_browsers_img]
+LABjs                    | ![LABjs Browser Status][labjs_browsers_img]
+RequireJS                | ![RequireJS Browser Status][requirejs_browsers_img]
+yepnope                  | ![yepnope Browser Status][yepnope_browsers_img]
+getscript                | ![getscript Browser Status][getscript_browsers_img]
+kist-loader              | ![kist-loader Browser Status][kist-loader_browsers_img]
+load-script              | ![load-script Browser Status][load-script_browsers_img]
+loads-js                 | ![loads-js Browser Status][loads-js_browsers_img]
+script-load              | ![script-load Browser Status][script-load_browsers_img]
+scriptload               | ![scriptload Browser Status][scriptload_browsers_img]
+
 [trav_img]: https://img.shields.io/travis/exogen/script-atomic-onload/master.svg
 [getscript_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=getscript&label=getscript
 [headjs_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=headjs&label=HeadJS
@@ -99,3 +120,16 @@ loadScript('https://code.jquery.com/jquery-1.11.3.min.js', function() {
 [script-load_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=script-load&label=script-load
 [yepnope_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=yepnope&label=yepnope
 [trav_site]: https://travis-ci.org/exogen/script-atomic-onload
+
+[script-atomic-onload_browsers_img]: http://localhost:3000/exogen/script-atomic-onload/sauce?name=script-atomic-onload
+[headjs_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=headjs
+[jquery_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=jquery
+[labjs_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=labjs
+[requirejs_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=requirejs
+[yepnope_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=yepnope
+[getscript_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=getscript
+[kist-loader_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=kist-loader
+[load-script_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=load-script
+[loads-js_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=loads-js
+[script-load_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=script-load
+[scriptload_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=scriptload

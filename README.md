@@ -121,7 +121,7 @@ scriptload               | ![scriptload Browser Status][scriptload_browsers_img]
 [yepnope_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=yepnope&label=yepnope
 [trav_site]: https://travis-ci.org/exogen/script-atomic-onload
 
-[script-atomic-onload_browsers_img]: http://localhost:3000/exogen/script-atomic-onload/sauce?name=script-atomic-onload
+[script-atomic-onload_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=script-atomic-onload
 [headjs_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=headjs
 [jquery_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=jquery
 [labjs_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=labjs

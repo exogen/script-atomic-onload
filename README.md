@@ -121,15 +121,15 @@ scriptload | ![scriptload Browser Status][scriptload_browsers_img]
 [yepnope_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=yepnope&label=yepnope
 [trav_site]: https://travis-ci.org/exogen/script-atomic-onload
 
-[script-atomic-onload_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=script-atomic-onload
-[headjs_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=headjs
-[jquery_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=jquery
-[labjs_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=labjs
-[requirejs_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=requirejs
-[yepnope_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=yepnope
-[getscript_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=getscript
-[kist-loader_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=kist-loader
-[load-script_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=load-script
-[loads-js_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=loads-js
-[script-load_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=script-load
-[scriptload_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce?name=scriptload
+[script-atomic-onload_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce/script-atomic-onload?name=script-atomic-onload
+[headjs_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce/script-atomic-onload?name=headjs
+[jquery_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce/script-atomic-onload?name=jquery
+[labjs_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce/script-atomic-onload?name=labjs
+[requirejs_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce/script-atomic-onload?name=requirejs
+[yepnope_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce/script-atomic-onload?name=yepnope
+[getscript_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce/script-atomic-onload?name=getscript
+[kist-loader_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce/script-atomic-onload?name=kist-loader
+[load-script_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce/script-atomic-onload?name=load-script
+[loads-js_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce/script-atomic-onload?name=loads-js
+[script-load_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce/script-atomic-onload?name=script-load
+[scriptload_browsers_img]: http://travis-matrix.herokuapp.com/exogen/script-atomic-onload/sauce/script-atomic-onload?name=scriptload

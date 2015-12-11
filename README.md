@@ -1,3 +1,7 @@
+Hey people! You’re welcome to use this code, but I recommend checking out the
+even-better-tested, error-handling, well-supported version at
+[walmartlabs/little-loader](https://github.com/walmartlabs/little-loader). Enjoy!
+
 [![Build Status][trav_img]][trav_site]
 
 Your script loader probably doesn’t have the callback behavior you want.

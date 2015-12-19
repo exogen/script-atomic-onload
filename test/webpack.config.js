@@ -31,6 +31,11 @@ module.exports = {
         test: /yepnope-2\.0\.0\.js$/,
         include: path.join(__dirname, "vendor"),
         loader: "exports?window.yepnope"
+      },
+      {
+        test: /yui\.js$/,
+        include: path.join(__dirname, "vendor"),
+        loader: "exports?YUI"
       }
     ]
   },

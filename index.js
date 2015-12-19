@@ -1,21 +1,28 @@
 /**
- * Script loading is difficult thanks to IE. We need callbacks to fire
- * immediately following the script's execution, with no other scripts
- * running in between. If other scripts on the page are able to run
- * between our script and its callback, bad things can happen, such as
- * `jQuery.noConflict` not being called in time, resulting in plugins
- * latching onto our version of jQuery, etc.
+ * NOTE: This is a reference implementation. It's very simple and doesn't
+ * support `onerror` (another hard problem), but it's known to have the correct
+ * (atomic) `onload` behavior, and will never change. If you're looking for a
+ * correct library based on this code, I recommend little-loader:
  *
- * For IE<10 we use a relatively well-documented 'preloading' strategy,
- * which ensures that the script is ready to execute *before* appending
- * it to the DOM. That way when it is finally appended, it is
- * executed immediately.
+ *   https://github.com/walmartlabs/little-loader
+ *
+ * Script loading is difficult thanks to IE. We need callbacks to fire
+ * immediately following the script's execution, with no other scripts running
+ * in between. If other scripts on the page are able to run between our script
+ * and its callback, bad things can happen, such as `jQuery.noConflict` not
+ * being called in time, resulting in plugins latching onto our version of
+ * jQuery, etc.
+ *
+ * For IE<10 we use a relatively well-documented 'preloading' strategy, which
+ * ensures that the script is ready to execute *before* appending it to the
+ * DOM. That way when it is finally appended, it is executed immediately.
  *
  * References:
  * 1. http://www.html5rocks.com/en/tutorials/speed/script-loading/
  * 2. http://blog.getify.com/ie11-please-bring-real-script-preloading-back/
  * 3. https://github.com/jrburke/requirejs/issues/526
- * 4. https://connect.microsoft.com/IE/feedback/details/729164/ie10-dynamic-script-element-fires-loaded-readystate-prematurely
+ * 4. https://connect.microsoft.com/IE/feedback/details/729164/
+ *      ie10-dynamic-script-element-fires-loaded-readystate-prematurely
  */
 var _pendingScripts = {},
     _scriptCounter = 0;

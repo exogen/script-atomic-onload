@@ -1,11 +1,6 @@
-Hey people! You’re welcome to use this code, but I recommend checking out the
-even-better-tested, error-handling, well-supported version at
-[walmartlabs/little-loader](https://github.com/walmartlabs/little-loader). Enjoy!
-
 [![Build Status][trav_img]][trav_site]
 
 Your script loader probably doesn’t have the callback behavior you want.
-We test some competing loaders for atomic `onload` behavior in our build matrix.
 
 Using a popular library?
 
@@ -13,7 +8,9 @@ Using a popular library?
 [![jQuery Status][jquery_img]][trav_site]
 [![LABjs Status][labjs_img]][trav_site]
 [![RequireJS Status][requirejs_img]][trav_site]
+[![$script.js Status][scriptjs_img]][trav_site]
 [![yepnope Status][yepnope_img]][trav_site]
+[![YUI Status][yui_img]][trav_site]
 
 Or perhaps one of these lesser-known packages?
 
@@ -23,6 +20,7 @@ Or perhaps one of these lesser-known packages?
 [![loads-js Status][loads-js_img]][trav_site]
 [![script-load Status][script-load_img]][trav_site]
 [![scriptload Status][scriptload_img]][trav_site]
+[![toast Status][toast_img]][trav_site]
 
 Sorry.
 
@@ -30,42 +28,57 @@ Introducing…
 
 # script-atomic-onload
 
-```bash
-npm install script-atomic-onload
-```
+A build matrix of every script loader ever made.
 
-## An asynchronous script loader with atomic/synchronous `onload` behavior everywhere
+This project tests script loaders for atomic `onload` support, which is the
+only correct behavior. It also contains a reference implementation of correct
+behavior, which has been adopted in the production-ready
+[little-loader][little-loader] module.
+
+[![little-loader Status][little-loader_img]][trav_site]
+
+:trophy: **[little-loader][little-loader] is the only correct script loader ever made.**
+
+
+### The Only Correct Behavior
 
 Yes, calling `onload` *immediately* (aka synchronously or atomically) after a
 `<script>` has executed is the correct and officially defined behavior. So
 what’s the problem? **Internet Explorer.** Below version 10, getting this
-behavior requires you jump through some hoops, and *many* script loaders get it
-wrong or just don’t try. Even [jQuery’s `getScript`](https://api.jquery.com/jquery.getscript/)
-does not make this guarantee, documenting that “The callback is fired once the
-script has been loaded but not necessarily executed.”
+behavior requires you jump through some hoops. Some script loaders just don’t
+try; for example, [jQuery’s `getScript`][getScript] does not make this
+guarantee, documenting that “The callback is fired once the script has been
+loaded but not necessarily executed.” Those that do try often try *very hard*
+and end up being far too clever and still incorrect.
 
 If you haven’t designed for it by bundling all your code or using a system
 like AMD, having other code run in between your script and its `onload`
 callback can be potentially disastrous. For instance, let’s say you make a
 widget people can load on their site, and it relies on jQuery. You want to load
-jQuery from one of the many CDNs that publish it. But since your widget might
-be used on sites that already use jQuery, you need to use `jQuery.noConflict` to
-keep yours isolated. The problem comes when you load your version of jQuery in
-IE, and before its `onload` callback fires, other code on the site can see it
-and, mistaking it for a different instance of jQuery, start attaching plugins
-and such to it. Eventually your `noConflict` gets called, but it’s too late –
-the plugins are attached to the wrong jQuery instance.
+jQuery from a CDN. But since your widget might be used on sites that already
+use jQuery, you need to use `jQuery.noConflict` to keep yours isolated. When
+you load your version of jQuery in IE, it’s possible other code on the page can
+see it before your `onload` callback fires. Any code can then modify your
+instance of jQuery, adding plugins and such (most likely mistaking it for a
+different instance of jQuery). Eventually your `noConflict` gets called, but
+it’s too late – the plugins are attached to the wrong jQuery instance. This is
+not a problem with jQuery, but with the script loader.
 
-**There may be other script loading libraries that already do this, but I’ve
-never found one.** If I did, I’d add it to the CI build matrix and you’d see
-its results above. This particular implementation may not be widely adopted,
-but it has been battle-tested on many high-traffic, script-laden sites in
-production. Just because you’ve never had an issue with your script loader,
-doesn’t mean it’s correct! One particular issue that this loader resolved was
-only ever seen on one site, and only sometimes (when certain race conditions
-were met).
+This particular implementation may not be widely adopted, but it has been
+battle-tested on many high-traffic, script-laden sites in production. Just
+because you’ve never had an issue with your script loader, doesn’t mean it’s
+correct! One particular issue that this loader resolved was only ever seen on
+one site, and only sometimes (when certain race conditions were triggered).
 
-## Usage
+## Reference Implementation
+
+### Install
+
+```sh
+npm install script-atomic-onload
+```
+
+### Usage
 
 ```javascript
 loadScript(src[, callback, thisValue])
@@ -80,7 +93,7 @@ Arguments:
   cross-domain scripts in older versions of IE anyway.)
 * `thisValue`: The `this` value that your `callback` will receive.
 
-## Examples
+### Examples
 
 ```javascript
 var loadScript = require('script-atomic-onload');
@@ -98,7 +111,7 @@ Maybe! Have a look at the results from our build matrix:
 
 Library | Browser Status
 ------: | --------------
-:trophy: **script-atomic-onload** | ![script-atomic-onload Browser Status][script-atomic-onload_browsers_img]
+:trophy: **little-loader** | ![little-loader Browser Status][little-loader_browsers_img]
 HeadJS | ![HeadJS Browser Status][headjs_browsers_img]
 jQuery | ![jQuery Browser Status][jquery_browsers_img]
 LABjs | ![LABjs Browser Status][labjs_browsers_img]
@@ -109,7 +122,11 @@ kist-loader | ![kist-loader Browser Status][kist-loader_browsers_img]
 load-script | ![load-script Browser Status][load-script_browsers_img]
 loads-js | ![loads-js Browser Status][loads-js_browsers_img]
 script-load | ![script-load Browser Status][script-load_browsers_img]
+$script.js | ![$script.js Browser Status][scriptjs_browsers_img]
 scriptload | ![scriptload Browser Status][scriptload_browsers_img]
+YUI | ![YUI Browser Status][yui_browsers_img]
+
+[little-loader]: https://github.com/walmartlabs/little-loader
 
 [trav_img]: https://img.shields.io/travis/exogen/script-atomic-onload/master.svg
 [getscript_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=getscript&label=getscript
@@ -117,18 +134,22 @@ scriptload | ![scriptload Browser Status][scriptload_browsers_img]
 [jquery_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=jquery&label=jQuery
 [kist-loader_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=kist-loader&label=kist-loader
 [labjs_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=labjs&label=LABjs
+[little-loader_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=little-loader&label=little-loader
 [load-script_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=load-script&label=load-script
 [loads-js_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=loads-js&label=loads-js
 [requirejs_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=requirejs&label=RequireJS
+[scriptjs_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=scriptjs&label=$script.js
 [scriptload_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=scriptload&label=scriptload
 [script-load_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=script-load&label=script-load
+[toast_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=toast&label=toast
 [yepnope_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=yepnope&label=yepnope
-[trav_site]: https://travis-ci.org/exogen/script-atomic-onload
+[yui_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=yui&label=YUI
 
 [script-atomic-onload_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=script-atomic-onload
 [headjs_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=headjs
 [jquery_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=jquery
 [labjs_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=labjs
+[little-loader_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=little-loader
 [requirejs_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=requirejs
 [yepnope_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=yepnope
 [getscript_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=getscript
@@ -136,4 +157,9 @@ scriptload | ![scriptload Browser Status][scriptload_browsers_img]
 [load-script_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=load-script
 [loads-js_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=loads-js
 [script-load_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=script-load
+[scriptjs_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=scriptjs
 [scriptload_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=scriptload
+[yui_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=yui
+
+[trav_site]: https://travis-ci.org/exogen/script-atomic-onload
+[getScript]: https://api.jquery.com/jquery.getscript

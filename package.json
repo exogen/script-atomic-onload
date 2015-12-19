@@ -41,11 +41,14 @@
     "karma-sourcemap-loader": "^0.3.6",
     "karma-webpack": "^1.7.0",
     "kist-loader": "^0.4.7",
+    "little-loader": "^0.1.0",
     "load-script": "^1.0.0",
     "loads-js": "^1.0.0",
     "mocha": "^2.3.3",
     "phantomjs": "^1.9.18",
+    "pyrsmk-toast": "^1.2.7",
     "script-load": "^0.1.0",
+    "scriptjs": "^2.5.8",
     "scriptload": "^0.2.0",
     "webpack": "^1.12.8"
   }

@@ -40,7 +40,7 @@ behavior, which has been adopted in the production-ready
 :trophy: **[little-loader][little-loader] is the only correct script loader ever made.**
 
 
-### The Only Correct Behavior
+### The only correct behavior…
 
 Yes, calling `onload` *immediately* (aka synchronously or atomically) after a
 `<script>` has executed is the correct and officially defined behavior. So
@@ -96,9 +96,9 @@ Arguments:
 ### Examples
 
 ```javascript
-var loadScript = require('script-atomic-onload');
+var loadScript = require("script-atomic-onload");
 
-loadScript('https://code.jquery.com/jquery-1.11.3.min.js', function() {
+loadScript("https://code.jquery.com/jquery-1.11.3.min.js", function() {
   var jQuery = window.jQuery.noConflict(true);
   // We’re guaranteed to have an instance of jQuery that no other script on the
   // page has extended or modified.

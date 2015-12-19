@@ -31,9 +31,8 @@ Introducing…
 A build matrix of every script loader ever made.
 
 This project tests script loaders for atomic `onload` support, which is the
-only correct behavior. It also contains a reference implementation of correct
-behavior, which has been adopted in the production-ready
-[little-loader][little-loader] module.
+only correct behavior. It also contains a reference implementation, which has
+been adopted in the production-ready [little-loader][little-loader] module.
 
 [![little-loader Status][little-loader_img]][travis]
 

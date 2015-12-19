@@ -22,12 +22,16 @@ env:
     - TEST_LOADER=jquery
     - TEST_LOADER=kist-loader
     - TEST_LOADER=labjs
+    - TEST_LOADER=little-loader
     - TEST_LOADER=load-script
     - TEST_LOADER=loads-js
     - TEST_LOADER=requirejs
     - TEST_LOADER=script-load
+    - TEST_LOADER=scriptjs
     - TEST_LOADER=scriptload
+    - TEST_LOADER=toast
     - TEST_LOADER=yepnope
+    - TEST_LOADER=yui
 
 matrix:
   fast_finish: true
@@ -37,12 +41,16 @@ matrix:
     - env: TEST_LOADER=jquery
     - env: TEST_LOADER=kist-loader
     - env: TEST_LOADER=labjs
+    - env: TEST_LOADER=little-loader
     - env: TEST_LOADER=load-script
     - env: TEST_LOADER=loads-js
     - env: TEST_LOADER=requirejs
     - env: TEST_LOADER=script-load
+    - env: TEST_LOADER=scriptjs
     - env: TEST_LOADER=scriptload
+    - env: TEST_LOADER=toast
     - env: TEST_LOADER=yepnope
+    - env: TEST_LOADER=yui
 
 script:
   - npm run test-ci

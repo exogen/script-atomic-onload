@@ -1,26 +1,26 @@
-[![Build Status][trav_img]][trav_site]
+[![Build Status][script-atomic-onload_img]][travis]
 
 Your script loader probably doesn’t have the callback behavior you want.
 
 Using a popular library?
 
-[![HeadJS Status][headjs_img]][trav_site]
-[![jQuery Status][jquery_img]][trav_site]
-[![LABjs Status][labjs_img]][trav_site]
-[![RequireJS Status][requirejs_img]][trav_site]
-[![$script.js Status][scriptjs_img]][trav_site]
-[![yepnope Status][yepnope_img]][trav_site]
-[![YUI Status][yui_img]][trav_site]
+[![HeadJS Status][headjs_img]][travis]
+[![jQuery Status][jquery_img]][travis]
+[![LABjs Status][labjs_img]][travis]
+[![RequireJS Status][requirejs_img]][travis]
+[![$script.js Status][scriptjs_img]][travis]
+[![yepnope Status][yepnope_img]][travis]
+[![YUI Status][yui_img]][travis]
 
 Or perhaps one of these lesser-known packages?
 
-[![getscript Status][getscript_img]][trav_site]
-[![kist-loader Status][kist-loader_img]][trav_site]
-[![load-script Status][load-script_img]][trav_site]
-[![loads-js Status][loads-js_img]][trav_site]
-[![script-load Status][script-load_img]][trav_site]
-[![scriptload Status][scriptload_img]][trav_site]
-[![toast Status][toast_img]][trav_site]
+[![getscript Status][getscript_img]][travis]
+[![kist-loader Status][kist-loader_img]][travis]
+[![load-script Status][load-script_img]][travis]
+[![loads-js Status][loads-js_img]][travis]
+[![script-load Status][script-load_img]][travis]
+[![scriptload Status][scriptload_img]][travis]
+[![toast Status][toast_img]][travis]
 
 Sorry.
 
@@ -35,7 +35,7 @@ only correct behavior. It also contains a reference implementation of correct
 behavior, which has been adopted in the production-ready
 [little-loader][little-loader] module.
 
-[![little-loader Status][little-loader_img]][trav_site]
+[![little-loader Status][little-loader_img]][travis]
 
 :trophy: **[little-loader][little-loader] is the only correct script loader ever made.**
 
@@ -116,17 +116,18 @@ Library | Browser Status
 [jQuery][jquery] | ![jQuery Browser Status][jquery_browsers_img]
 [LABjs][labjs] | ![LABjs Browser Status][labjs_browsers_img]
 [RequireJS][requirejs] | ![RequireJS Browser Status][requirejs_browsers_img]
+[$script.js][scriptjs] | ![$script.js Browser Status][scriptjs_browsers_img]
 [yepnope][] | ![yepnope Browser Status][yepnope_browsers_img]
+[YUI][yui] | ![YUI Browser Status][yui_browsers_img]
 [getscript][] | ![getscript Browser Status][getscript_browsers_img]
 [kist-loader][] | ![kist-loader Browser Status][kist-loader_browsers_img]
 [load-script][] | ![load-script Browser Status][load-script_browsers_img]
 [loads-js][] | ![loads-js Browser Status][loads-js_browsers_img]
 [script-load][] | ![script-load Browser Status][script-load_browsers_img]
-[$script.js][scriptjs] | ![$script.js Browser Status][scriptjs_browsers_img]
 [scriptload][] | ![scriptload Browser Status][scriptload_browsers_img]
-[YUI][yui] | ![YUI Browser Status][yui_browsers_img]
+[toast][] | ![toast Browser Status][toast_browsers_img]
 
-[trav_img]: https://img.shields.io/travis/exogen/script-atomic-onload/master.svg
+[script-atomic-onload_img]: https://img.shields.io/travis/exogen/script-atomic-onload/master.svg
 [getscript_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=getscript&label=getscript
 [headjs_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=headjs&label=HeadJS
 [jquery_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=jquery&label=jQuery
@@ -157,9 +158,10 @@ Library | Browser Status
 [script-load_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=script-load
 [scriptjs_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=scriptjs
 [scriptload_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=scriptload
+[toast_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=toast
 [yui_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=yui
 
-[trav_site]: https://travis-ci.org/exogen/script-atomic-onload
+[travis]: https://travis-ci.org/exogen/script-atomic-onload
 
 [getscript]: https://www.npmjs.com/package/getscript
 [headjs]: http://headjs.com/

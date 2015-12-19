@@ -27,9 +27,7 @@
   "homepage": "https://github.com/exogen/script-atomic-onload",
   "devDependencies": {
     "expect.js": "^0.3.1",
-    "exports-loader": "^0.6.2",
     "getscript": "^0.1.0",
-    "imports-loader": "^0.6.5",
     "karma": "^0.13.15",
     "karma-chrome-launcher": "^0.2.1",
     "karma-firefox-launcher": "^0.1.7",
@@ -48,6 +46,8 @@
     "phantomjs": "^1.9.18",
     "pyrsmk-toast": "^1.2.7",
     "script-load": "^0.1.0",
+    "script-loader": "^0.6.1",
+    "scriptinclude": "^1.1.1",
     "scriptjs": "^2.5.8",
     "scriptload": "^0.2.0",
     "webpack": "^1.12.8"

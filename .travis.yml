@@ -17,16 +17,23 @@ env:
 
   matrix:
     - TEST_LOADER=script-atomic-onload
+    - TEST_LOADER=curl
     - TEST_LOADER=getscript
     - TEST_LOADER=headjs
     - TEST_LOADER=jquery
+    - TEST_LOADER=jsl
     - TEST_LOADER=kist-loader
     - TEST_LOADER=labjs
+    - TEST_LOADER=lazyload
     - TEST_LOADER=little-loader
+    - TEST_LOADER=ljs
     - TEST_LOADER=load-script
+    - TEST_LOADER=loadrunner
     - TEST_LOADER=loads-js
+    - TEST_LOADER=nbl
     - TEST_LOADER=requirejs
     - TEST_LOADER=script-load
+    - TEST_LOADER=scriptinclude
     - TEST_LOADER=scriptjs
     - TEST_LOADER=scriptload
     - TEST_LOADER=toast
@@ -36,16 +43,23 @@ env:
 matrix:
   fast_finish: true
   allow_failures:
+    - env: TEST_LOADER=curl
     - env: TEST_LOADER=getscript
     - env: TEST_LOADER=headjs
     - env: TEST_LOADER=jquery
+    - env: TEST_LOADER=jsl
     - env: TEST_LOADER=kist-loader
     - env: TEST_LOADER=labjs
+    - env: TEST_LOADER=lazyload
     - env: TEST_LOADER=little-loader
+    - env: TEST_LOADER=ljs
     - env: TEST_LOADER=load-script
+    - env: TEST_LOADER=loadrunner
     - env: TEST_LOADER=loads-js
+    - env: TEST_LOADER=nbl
     - env: TEST_LOADER=requirejs
     - env: TEST_LOADER=script-load
+    - env: TEST_LOADER=scriptinclude
     - env: TEST_LOADER=scriptjs
     - env: TEST_LOADER=scriptload
     - env: TEST_LOADER=toast

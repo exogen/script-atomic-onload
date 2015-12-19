@@ -110,21 +110,21 @@ Maybe! Have a look at the results from our build matrix:
 
 Library | Browser Status
 ------: | --------------
-:trophy: **[little-loader][]** | ![little-loader Browser Status][little-loader_browsers_img]
-[HeadJS][headjs] | ![HeadJS Browser Status][headjs_browsers_img]
-[jQuery][jquery] | ![jQuery Browser Status][jquery_browsers_img]
-[LABjs][labjs] | ![LABjs Browser Status][labjs_browsers_img]
-[RequireJS][requirejs] | ![RequireJS Browser Status][requirejs_browsers_img]
-[$script.js][scriptjs] | ![$script.js Browser Status][scriptjs_browsers_img]
-[yepnope][] | ![yepnope Browser Status][yepnope_browsers_img]
-[YUI][yui] | ![YUI Browser Status][yui_browsers_img]
-[getscript][] | ![getscript Browser Status][getscript_browsers_img]
-[kist-loader][] | ![kist-loader Browser Status][kist-loader_browsers_img]
-[load-script][] | ![load-script Browser Status][load-script_browsers_img]
-[loads-js][] | ![loads-js Browser Status][loads-js_browsers_img]
-[script-load][] | ![script-load Browser Status][script-load_browsers_img]
-[scriptload][] | ![scriptload Browser Status][scriptload_browsers_img]
-[toast][] | ![toast Browser Status][toast_browsers_img]
+:trophy: **[little-loader][]** | [![little-loader Browser Status][little-loader_browsers_img]][travis]
+[HeadJS][headjs] | [![HeadJS Browser Status][headjs_browsers_img]][travis]
+[jQuery][jquery] | [![jQuery Browser Status][jquery_browsers_img]][travis]
+[LABjs][labjs] | [![LABjs Browser Status][labjs_browsers_img]][travis]
+[RequireJS][requirejs] | [![RequireJS Browser Status][requirejs_browsers_img]][travis]
+[$script.js][scriptjs] | [![$script.js Browser Status][scriptjs_browsers_img]][travis]
+[yepnope][] | [![yepnope Browser Status][yepnope_browsers_img]][travis]
+[YUI][yui] | [![YUI Browser Status][yui_browsers_img]][travis]
+[getscript][] | [![getscript Browser Status][getscript_browsers_img]][travis]
+[kist-loader][] | [![kist-loader Browser Status][kist-loader_browsers_img]][travis]
+[load-script][] | [![load-script Browser Status][load-script_browsers_img]][travis]
+[loads-js][] | [![loads-js Browser Status][loads-js_browsers_img]][travis]
+[script-load][] | [![script-load Browser Status][script-load_browsers_img]][travis]
+[scriptload][] | [![scriptload Browser Status][scriptload_browsers_img]][travis]
+[toast][] | [![toast Browser Status][toast_browsers_img]][travis]
 
 [script-atomic-onload_img]: https://img.shields.io/travis/exogen/script-atomic-onload/master.svg
 [getscript_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=getscript&label=getscript

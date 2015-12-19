@@ -1,5 +1,4 @@
-require('../vendor/jquery-1.11.3');
-var jQuery = window.jQuery.noConflict(true);
+var jQuery = require('../vendor/jquery-1.11.3');
 if (typeof window.jQuery !== "undefined") {
   // Make sure we loaded jQuery with noGlobal behavior.
   throw new Error("jQuery present on window");

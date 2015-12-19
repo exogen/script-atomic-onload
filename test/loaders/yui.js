@@ -1,5 +1,4 @@
-require('../vendor/yui');
-var YUI = window.YUI;
+var YUI = require('../vendor/yui');
 var sandbox = YUI(); // YUI instances are called sandboxes.
 var Y;
 

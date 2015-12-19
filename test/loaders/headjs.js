@@ -1,5 +1,4 @@
-require('../vendor/head.load');
-var head = window.head;
+var head = require('../vendor/head.load');
 module.exports = function(src, callback) {
   head.load(src, callback);
 };

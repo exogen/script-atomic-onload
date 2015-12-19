@@ -1,2 +1,2 @@
-require('../vendor/loadrunner');
-module.exports = window.using;
+var using = require('../vendor/loadrunner');
+module.exports = using;

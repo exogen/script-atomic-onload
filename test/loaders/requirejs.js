@@ -1,8 +1,7 @@
 // RequireJS is by far the most difficult to get working as a generic script
 // loader; it's not really designed for this use case. But we can trick it
 // into behaving as expected for arbitrary scripts.
-require('../vendor/require');
-var requirejs = window.requirejs;
+var requirejs = require('../vendor/require');
 var counter = 0;
 module.exports = function(src, callback) {
   // RequireJS treats URLs similar to modules in that the same URL is cached

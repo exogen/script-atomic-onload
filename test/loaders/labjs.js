@@ -1,5 +1,4 @@
-require('../vendor/LABjs-2.0.3/LAB');
-var $LAB = window.$LAB;
+var $LAB = require('../vendor/LABjs-2.0.3/LAB');
 // As a completely generic script loader, LABjs is broken by default: if
 // you load the same script URL twice, it won't be executed the second
 // time. That means if multiple packages load jQuery from the same URL

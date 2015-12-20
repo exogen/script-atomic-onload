@@ -1,15 +1,14 @@
 var $LAB = require('../vendor/LABjs-2.0.3/LAB');
-// As a completely generic script loader, LABjs is broken by default: if
-// you load the same script URL twice, it won't be executed the second
-// time. That means if multiple packages load jQuery from the same URL
-// using the same instance of LABjs, and they are well-behaved and call
-// `jQuery.noConflict(true)` to isolate their jQuery dependency and
-// plugins, the second package won't get any jQuery instance at all
-// because its jQuery dependency will never load.
-// Setting `AllowDuplicates: true` fixes this.
 $LAB.setGlobalDefaults({
+  // By default, LABjs doesn't allow the same script to be run twice. That
+  // means it's broken as a completely generic script loader, unless you
+  // set `AllowDuplicates`.
   AllowDuplicates: true
 });
 module.exports = function(src, callback) {
+  // It's unclear whether multiple calls to `$LAB.script` share a queue or not.
+  // We could use `$LAB.sandbox` to ensure a completely new queue, but it
+  // doesn't appear to change the behavior in tests. Somehow, LABjs fails the
+  // parallel load test in most browsers either way.
   $LAB.script(src).wait(callback);
 };

@@ -9,6 +9,7 @@ function loadScript(src, callback) {
   // transactions are processed serially. That means you can't actually load
   // scripts in parallel if you use Get multiple times. Calling `execute` will
   // ensure that we fetch right away, in parallel with any other transactions.
+  // If we didn't do this, YUI would fail the parallel load test anyway.
   tx.execute();
 }
 

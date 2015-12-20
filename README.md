@@ -4,6 +4,7 @@ Your script loader probably doesn’t have the callback behavior you want.
 
 Using a popular library?
 
+[![curl.js Status][curl_img]][travis]
 [![HeadJS Status][headjs_img]][travis]
 [![jQuery Status][jquery_img]][travis]
 [![LABjs Status][labjs_img]][travis]
@@ -15,10 +16,16 @@ Using a popular library?
 Or perhaps one of these lesser-known packages?
 
 [![getscript Status][getscript_img]][travis]
+[![JSL Status][jsl_img]][travis]
 [![kist-loader Status][kist-loader_img]][travis]
+[![l.js Status][ljs_img]][travis]
+[![LazyLoad Status][lazyload_img]][travis]
 [![load-script Status][load-script_img]][travis]
+[![loadrunner Status][loadrunner_img]][travis]
 [![loads-js Status][loads-js_img]][travis]
+[![NBL Status][nbl_img]][travis]
 [![script-load Status][script-load_img]][travis]
+[![scriptinclude Status][scriptinclude_img]][travis]
 [![scriptload Status][scriptload_img]][travis]
 [![toast Status][toast_img]][travis]
 
@@ -111,6 +118,7 @@ Maybe! Have a look at the results from our build matrix:
 Library | Browser Status
 ------: | --------------
 :trophy: **[little-loader][]** | [![little-loader Browser Status][little-loader_browsers_img]][travis]
+[curl.js][curl] | [![curl.js Browser Status][curl_browsers_img]][travis]
 [HeadJS][headjs] | [![HeadJS Browser Status][headjs_browsers_img]][travis]
 [jQuery][jquery] | [![jQuery Browser Status][jquery_browsers_img]][travis]
 [LABjs][labjs] | [![LABjs Browser Status][labjs_browsers_img]][travis]
@@ -119,61 +127,88 @@ Library | Browser Status
 [yepnope][] | [![yepnope Browser Status][yepnope_browsers_img]][travis]
 [YUI][yui] | [![YUI Browser Status][yui_browsers_img]][travis]
 [getscript][] | [![getscript Browser Status][getscript_browsers_img]][travis]
+[JSL][jsl] | [![JSL Browser Status][jsl_browsers_img]][travis]
 [kist-loader][] | [![kist-loader Browser Status][kist-loader_browsers_img]][travis]
+[l.js][ljs] | [![l.js Browser Status][ljs_browsers_img]][travis]
+[LazyLoad][lazyload] | [![LazyLoad Browser Status][lazyload_browsers_img]][travis]
 [load-script][] | [![load-script Browser Status][load-script_browsers_img]][travis]
+[loadrunner][] | [![loadrunner Browser Status][loadrunner_browsers_img]][travis]
 [loads-js][] | [![loads-js Browser Status][loads-js_browsers_img]][travis]
+[NBL][nbl] | [![NBL Browser Status][nbl_browsers_img]][travis]
 [script-load][] | [![script-load Browser Status][script-load_browsers_img]][travis]
+[scriptinclude][] | [![scriptinclude Browser Status][scriptinclude_browsers_img]][travis]
 [scriptload][] | [![scriptload Browser Status][scriptload_browsers_img]][travis]
 [toast][] | [![toast Browser Status][toast_browsers_img]][travis]
 
 [script-atomic-onload_img]: https://img.shields.io/travis/exogen/script-atomic-onload/master.svg
+[curl_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=curl&label=curl.js
 [getscript_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=getscript&label=getscript
 [headjs_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=headjs&label=HeadJS
 [jquery_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=jquery&label=jQuery
+[jsl_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=jsl&label=JSL
 [kist-loader_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=kist-loader&label=kist-loader
 [labjs_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=labjs&label=LABjs
+[lazyload_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=lazyload&label=LazyLoad
 [little-loader_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=little-loader&label=little-loader
+[ljs_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=ljs&label=l.js
 [load-script_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=load-script&label=load-script
+[loadrunner_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=loadrunner&label=loadrunner
 [loads-js_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=loads-js&label=loads-js
+[nbl_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=nbl&label=NBL
 [requirejs_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=requirejs&label=RequireJS
+[script-load_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=script-load&label=script-load
+[scriptinclude_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=scriptinclude&label=ScriptInclude
 [scriptjs_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=scriptjs&label=$script.js
 [scriptload_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=scriptload&label=scriptload
-[script-load_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=script-load&label=script-load
 [toast_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=toast&label=toast
 [yepnope_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=yepnope&label=yepnope
 [yui_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&env=TEST_LOADER=yui&label=YUI
 
 [script-atomic-onload_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=script-atomic-onload
+[curl_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=curl
+[getscript_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=getscript
 [headjs_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=headjs
 [jquery_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=jquery
-[labjs_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=labjs
-[little-loader_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=little-loader
-[requirejs_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=requirejs
-[yepnope_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=yepnope
-[getscript_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=getscript
+[jsl_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=jsl
 [kist-loader_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=kist-loader
+[labjs_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=labjs
+[lazyload_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=lazyload
+[little-loader_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=little-loader
+[ljs_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=ljs
 [load-script_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=load-script
+[loadrunner_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=loadrunner
 [loads-js_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=loads-js
+[nbl_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=nbl
+[requirejs_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=requirejs
 [script-load_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=script-load
+[scriptinclude_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=scriptinclude
 [scriptjs_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=scriptjs
 [scriptload_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=scriptload
 [toast_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=toast
+[yepnope_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=yepnope
 [yui_browsers_img]: http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=yui
 
 [travis]: https://travis-ci.org/exogen/script-atomic-onload
 
+[curl]: https://github.com/cujojs/curl
 [getscript]: https://www.npmjs.com/package/getscript
 [headjs]: http://headjs.com/
 [jquery]: https://api.jquery.com/jquery.getscript
+[jsl]: http://www.andresvidal.com/jsl
 [kist-loader]: https://www.npmjs.com/package/kist-loader
 [labjs]: http://labjs.com/
+[lazyload]: https://github.com/rgrove/lazyload
 [little-loader]: https://github.com/walmartlabs/little-loader
+[ljs]: http://malko.github.io/l.js/
 [load-script]: https://www.npmjs.com/package/load-script
+[loadrunner]: https://github.com/danwrong/loadrunner
 [loads-js]: https://www.npmjs.com/package/loads-js
+[nbl]: http://berklee.github.io/nbl/
 [requirejs]: http://requirejs.org/
 [scriptjs]: https://github.com/ded/script.js
 [scriptload]: https://www.npmjs.com/package/scriptload
 [script-load]: https://www.npmjs.com/package/script-load
+[scriptinclude]: https://www.npmjs.com/package/scriptinclude
 [toast]: https://www.npmjs.com/package/pyrsmk-toast
 [yepnope]: https://github.com/SlexAxton/yepnope.js
 [yui]: http://yuilibrary.com/yui/docs/get/

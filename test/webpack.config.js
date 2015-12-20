@@ -13,28 +13,51 @@ module.exports = {
         loader: "imports?this=>window"
       },
       {
-        test: /head\.load\.js$/,
-        include: path.join(__dirname, "vendor"),
+        include: require.resolve("./vendor/curl-with-js-domReady-legacy"),
+        loader: "script"
+      },
+      {
+        test: require.resolve("./vendor/head.load"),
         loader: "exports?head"
       },
       {
-        test: /LABjs-2\.0\.3/,
-        include: path.join(__dirname, "vendor"),
+        test: require.resolve("./vendor/jsl.min"),
+        loader: "exports?jsl"
+      },
+      {
+        test: require.resolve("./vendor/l"),
+        loader: "exports?ljs"
+      },
+      {
+        test: require.resolve("./vendor/LABjs-2.0.3/LAB"),
         loader: "exports?$LAB"
       },
       {
-        test: /require\.js$/,
-        include: path.join(__dirname, "vendor"),
+        test: require.resolve("./vendor/lazyload"),
+        loader: "exports?LazyLoad"
+      },
+      {
+        test: require.resolve("./vendor/loadrunner"),
+        loader: "exports?using"
+      },
+      {
+        test: require.resolve("./vendor/nbl"),
+        loader: "exports?nbl"
+      },
+      {
+        test: require.resolve("./vendor/require"),
         loader: "exports?requirejs"
       },
       {
-        test: /yepnope-2\.0\.0\.js$/,
-        include: path.join(__dirname, "vendor"),
-        loader: "exports?window.yepnope"
+        test: require.resolve("scriptinclude"),
+        loader: "exports?include"
       },
       {
-        test: /yui\.js$/,
-        include: path.join(__dirname, "vendor"),
+        test: require.resolve("./vendor/yepnope-2.0.0"),
+        loader: "exports?yepnope"
+      },
+      {
+        test: require.resolve("./vendor/yui"),
         loader: "exports?YUI"
       }
     ]

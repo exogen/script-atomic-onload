@@ -99,6 +99,8 @@ describe("loadScript", function() {
       // OK, the cache should be primed with this version. Now load an uncached
       // version and then this version again. If the uncached version loads
       // first, the loader must be queuing, not loading in parallel.
+
+      // Bust cache just in case this version was used in another test.
       loadScript("http://code.jquery.com/jquery-1.8.3.js?bustin=makesmefeelgood", function() {
         checkDone("1.8.3");
       });

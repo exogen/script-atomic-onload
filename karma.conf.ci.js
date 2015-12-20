@@ -66,7 +66,9 @@ module.exports = function(config) {
       startConnect: process.env.TRAVIS !== "true",
       tags: ["TEST_LOADER=" + TEST_LOADER]
     },
-    captureTimeout: 120000,
+    captureTimeout: 0,
+    browserDisconnectTimeout: 300000,
+    browserDisconnectTolerance: 2,
     browserNoActivityTimeout: 300000
   });
 };

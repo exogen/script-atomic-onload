@@ -14,7 +14,7 @@ describe("loadScript", function() {
    * modified our instance of jQuery).
    */
   function jQueryTest(done) {
-    this.timeout(300000);
+    this.timeout(180000);
     var count = 0;
     function checkDone(version) {
       // Need the try/catch because we're in an async callback and any assertion
@@ -81,21 +81,25 @@ describe("loadScript", function() {
    * totally cheating.
    */
   it("loads scripts in parallel / does not queue", function(done) {
-    this.timeout(300000);
+    this.timeout(180000);
     var order = [];
     function checkDone(version) {
       order.push(version);
       if (order.length === 2) {
-        expect(order[0]).to.equal("1.7.2");
-        expect(order[1]).to.equal("1.8.3");
-        done();
+        try {
+          expect(order[0]).to.equal("1.7.2");
+          expect(order[1]).to.equal("1.8.3");
+          done();
+        } catch(err) {
+          done(err);
+        }
       }
     }
     loadScript("http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", function() {
       // OK, the cache should be primed with this version. Now load an uncached
       // version and then this version again. If the uncached version loads
       // first, the loader must be queuing, not loading in parallel.
-      loadScript("http://code.jquery.com/jquery-1.8.3.js", function() {
+      loadScript("http://code.jquery.com/jquery-1.8.3.js?bustin=makesmefeelgood", function() {
         checkDone("1.8.3");
       });
       loadScript("http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", function() {

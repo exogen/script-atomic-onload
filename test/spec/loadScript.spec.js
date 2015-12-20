@@ -95,7 +95,7 @@ describe("loadScript", function() {
       // OK, the cache should be primed with this version. Now load an uncached
       // version and then this version again. If the uncached version loads
       // first, the loader must be queuing, not loading in parallel.
-      loadScript("https://code.jquery.com/jquery-1.8.3.js", function() {
+      loadScript("http://code.jquery.com/jquery-1.8.3.js", function() {
         checkDone("1.8.3");
       });
       loadScript("http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", function() {

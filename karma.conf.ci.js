@@ -67,8 +67,8 @@ module.exports = function(config) {
       tags: ["TEST_LOADER=" + TEST_LOADER]
     },
     captureTimeout: 0,
-    browserDisconnectTimeout: 300000,
-    browserDisconnectTolerance: 2,
-    browserNoActivityTimeout: 300000
+    browserDisconnectTimeout: 180000,
+    browserDisconnectTolerance: 5,
+    browserNoActivityTimeout: 180000
   });
 };

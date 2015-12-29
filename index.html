@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>script-atomic-onload by exogen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">script-atomic-onload</h1>
+      <h2 class="project-tagline">Test every script loader for correct, atomic onload support</h2>
+      <a href="https://github.com/exogen/script-atomic-onload" class="btn">View on GitHub</a>
+      <a href="https://github.com/exogen/script-atomic-onload/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/exogen/script-atomic-onload/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="https://img.shields.io/travis/exogen/script-atomic-onload/master.svg" alt="Build Status"></a></p>
+
+<p>Your script loader probably doesn’t have the callback behavior you want.</p>
+
+<p>Using a popular library?</p>
+
+<p><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=curl&amp;label=curl.js" alt="curl.js Status"></a>
+<a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=headjs&amp;label=HeadJS" alt="HeadJS Status"></a>
+<a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=jquery&amp;label=jQuery" alt="jQuery Status"></a>
+<a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=labjs&amp;label=LABjs" alt="LABjs Status"></a>
+<a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=requirejs&amp;label=RequireJS" alt="RequireJS Status"></a>
+<a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=scriptjs&amp;label=%24script.js" alt="$script.js Status"></a>
+<a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=yepnope&amp;label=yepnope" alt="yepnope Status"></a>
+<a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=yui&amp;label=YUI" alt="YUI Status"></a></p>
+
+<p>Or perhaps one of these lesser-known packages?</p>
+
+<p><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=getscript&amp;label=getscript" alt="getscript Status"></a>
+<a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=jsl&amp;label=JSL" alt="JSL Status"></a>
+<a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=kist-loader&amp;label=kist-loader" alt="kist-loader Status"></a>
+<a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=ljs&amp;label=l.js" alt="l.js Status"></a>
+<a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=lazyload&amp;label=LazyLoad" alt="LazyLoad Status"></a>
+<a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=load-script&amp;label=load-script" alt="load-script Status"></a>
+<a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=loadrunner&amp;label=loadrunner" alt="loadrunner Status"></a>
+<a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=loads-js&amp;label=loads-js" alt="loads-js Status"></a>
+<a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=nbl&amp;label=NBL" alt="NBL Status"></a>
+<a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=script-load&amp;label=script-load" alt="script-load Status"></a>
+<a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=scriptinclude&amp;label=ScriptInclude" alt="scriptinclude Status"></a>
+<a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=scriptload&amp;label=scriptload" alt="scriptload Status"></a>
+<a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=toast&amp;label=toast" alt="toast Status"></a></p>
+
+<p>Sorry.</p>
+
+<p>Introducing…</p>
+
+<h1>
+<a id="script-atomic-onload" class="anchor" href="#script-atomic-onload" aria-hidden="true"><span class="octicon octicon-link"></span></a>script-atomic-onload</h1>
+
+<p>A build matrix of every script loader ever made.</p>
+
+<p>This project tests script loaders for atomic <code>onload</code> support, which is the
+only correct behavior. It also contains a reference implementation, which has
+been adopted in the production-ready <a href="https://github.com/walmartlabs/little-loader">little-loader</a> module.</p>
+
+<p><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload?branch=master&amp;env=TEST_LOADER=little-loader&amp;label=little-loader" alt="little-loader Status"></a></p>
+
+<p><img class="emoji" title=":trophy:" alt=":trophy:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f3c6.png" height="20" width="20" align="absmiddle"> <strong><a href="https://github.com/walmartlabs/little-loader">little-loader</a> is the only correct script loader ever made.</strong></p>
+
+<h3>
+<a id="the-only-correct-behavior" class="anchor" href="#the-only-correct-behavior" aria-hidden="true"><span class="octicon octicon-link"></span></a>The only correct behavior…</h3>
+
+<p>Yes, calling <code>onload</code> <em>immediately</em> (aka synchronously or atomically) after a
+<code>&lt;script&gt;</code> has executed is the correct and officially defined behavior. So
+what’s the problem? <strong>Internet Explorer.</strong> Below version 10, getting this
+behavior requires you jump through some hoops. Some script loaders just don’t
+try; for example, <a href="https://api.jquery.com/jquery.getscript">jQuery’s <code>getScript</code></a> does not make this
+guarantee, documenting that “The callback is fired once the script has been
+loaded but not necessarily executed.” Those that do try often try <em>very hard</em>
+and end up being far too clever and still incorrect.</p>
+
+<p>If you haven’t designed for it by bundling all your code or using a system
+like AMD, having other code run in between your script and its <code>onload</code>
+callback can be potentially disastrous. For instance, let’s say you make a
+widget people can load on their site, and it relies on jQuery. You want to load
+jQuery from a CDN. But since your widget might be used on sites that already
+use jQuery, you need to use <code>jQuery.noConflict</code> to keep yours isolated. When
+you load your version of jQuery in IE, it’s possible other code on the page can
+see it before your <code>onload</code> callback fires. Any code can then modify your
+instance of jQuery, adding plugins and such (most likely mistaking it for a
+different instance of jQuery). Eventually your <code>noConflict</code> gets called, but
+it’s too late – the plugins are attached to the wrong jQuery instance. This is
+not a problem with jQuery, but with the script loader.</p>
+
+<p>This particular implementation may not be widely adopted, but it has been
+battle-tested on many high-traffic, script-laden sites in production. Just
+because you’ve never had an issue with your script loader, doesn’t mean it’s
+correct! One particular issue that this loader resolved was only ever seen on
+one site, and only sometimes (when certain race conditions were triggered).</p>
+
+<h2>
+<a id="reference-implementation" class="anchor" href="#reference-implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference Implementation</h2>
+
+<h3>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h3>
+
+<div class="highlight highlight-source-shell"><pre>npm install script-atomic-onload</pre></div>
+
+<h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">loadScript</span>(src[, callback, thisValue])</pre></div>
+
+<p>Arguments:</p>
+
+<ul>
+<li>
+<code>src</code>: The URL of the script to load.</li>
+<li>
+<code>callback</code>: The function to call immediately after the script has executed. It
+will be called with no arguments, but we reserve the right to pass an <code>err</code>
+parameter in future versions. (Load errors can be difficult to detect on
+cross-domain scripts in older versions of IE anyway.)</li>
+<li>
+<code>thisValue</code>: The <code>this</code> value that your <code>callback</code> will receive.</li>
+</ul>
+
+<h3>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h3>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> loadScript <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>script-atomic-onload<span class="pl-pds">"</span></span>);
+
+<span class="pl-en">loadScript</span>(<span class="pl-s"><span class="pl-pds">"</span>https://code.jquery.com/jquery-1.11.3.min.js<span class="pl-pds">"</span></span>, <span class="pl-k">function</span>() {
+  <span class="pl-k">var</span> jQuery <span class="pl-k">=</span> <span class="pl-smi">window</span>.<span class="pl-smi">jQuery</span>.<span class="pl-en">noConflict</span>(<span class="pl-c1">true</span>);
+  <span class="pl-c">// We’re guaranteed to have an instance of jQuery that no other script on the</span>
+  <span class="pl-c">// page has extended or modified.</span>
+});</pre></div>
+
+<h2>
+<a id="i-dont-support-old-ie-anyway-am-i-safe" class="anchor" href="#i-dont-support-old-ie-anyway-am-i-safe" aria-hidden="true"><span class="octicon octicon-link"></span></a>I don’t support old IE anyway, am I safe?</h2>
+
+<p>Maybe! Have a look at the results from our build matrix:</p>
+
+<table>
+<thead>
+<tr>
+<th align="right">Library</th>
+<th>Browser Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">
+<img class="emoji" title=":trophy:" alt=":trophy:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f3c6.png" height="20" width="20" align="absmiddle"> <strong><a href="https://github.com/walmartlabs/little-loader">little-loader</a></strong>
+</td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=little-loader" alt="little-loader Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="https://github.com/cujojs/curl">curl.js</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=curl" alt="curl.js Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="http://headjs.com/">HeadJS</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=headjs" alt="HeadJS Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="https://api.jquery.com/jquery.getscript">jQuery</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=jquery" alt="jQuery Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="http://labjs.com/">LABjs</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=labjs" alt="LABjs Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="http://requirejs.org/">RequireJS</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=requirejs" alt="RequireJS Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="https://github.com/ded/script.js">$script.js</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=scriptjs" alt="$script.js Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="https://github.com/SlexAxton/yepnope.js">yepnope</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=yepnope" alt="yepnope Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="http://yuilibrary.com/yui/docs/get/">YUI</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=yui" alt="YUI Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="https://www.npmjs.com/package/getscript">getscript</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=getscript" alt="getscript Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="http://www.andresvidal.com/jsl">JSL</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=jsl" alt="JSL Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="https://www.npmjs.com/package/kist-loader">kist-loader</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=kist-loader" alt="kist-loader Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="http://malko.github.io/l.js/">l.js</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=ljs" alt="l.js Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="https://github.com/rgrove/lazyload">LazyLoad</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=lazyload" alt="LazyLoad Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="https://www.npmjs.com/package/load-script">load-script</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=load-script" alt="load-script Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="https://github.com/danwrong/loadrunner">loadrunner</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=loadrunner" alt="loadrunner Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="https://www.npmjs.com/package/loads-js">loads-js</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=loads-js" alt="loads-js Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="http://berklee.github.io/nbl/">NBL</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=nbl" alt="NBL Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="https://www.npmjs.com/package/script-load">script-load</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=script-load" alt="script-load Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="https://www.npmjs.com/package/scriptinclude">scriptinclude</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=scriptinclude" alt="scriptinclude Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="https://www.npmjs.com/package/scriptload">scriptload</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=scriptload" alt="scriptload Browser Status"></a></td>
+</tr>
+<tr>
+<td align="right"><a href="https://www.npmjs.com/package/pyrsmk-toast">toast</a></td>
+<td><a href="https://travis-ci.org/exogen/script-atomic-onload"><img src="http://badges.herokuapp.com/travis/exogen/script-atomic-onload/sauce/script-atomic-onload?name=toast" alt="toast Browser Status"></a></td>
+</tr>
+</tbody>
+</table>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/exogen/script-atomic-onload">script-atomic-onload</a> is maintained by <a href="https://github.com/exogen">exogen</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-681936-7");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>

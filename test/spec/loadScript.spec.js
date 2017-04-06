@@ -1,4 +1,3 @@
-var expect = require('expect.js'); // Can't use Chai due to IE8.
 var loadScript = require('../loader');
 
 describe('loadScript', function() {
@@ -14,20 +13,19 @@ describe('loadScript', function() {
    * modified our instance of jQuery).
    */
   function jQueryTest(done) {
-    this.timeout(180000);
     var count = 0;
     function checkDone(version) {
       // Need the try/catch because we're in an async callback and any assertion
       // errors thrown won't be caught by Mocha; it'll time out instead.
       try {
         // jQuery must exist.
-        expect(window.jQuery).to.be.a('function');
+        expect(typeof window.jQuery).toEqual('function');
         // Remove the global.
         var jQuery = window.jQuery.noConflict(true);
         // Shouldn't be an instance we've previously loaded and marked.
-        expect(jQuery.FOO).to.be(undefined);
+        expect(jQuery.FOO).toBeUndefined();
         // Should be the expected version.
-        expect(jQuery.fn.jquery).to.equal(version);
+        expect(jQuery.fn.jquery).toEqual(version);
         // Mark the instance with a flag.
         jQuery.FOO = true;
         if (++count === 10) {
@@ -69,9 +67,9 @@ describe('loadScript', function() {
     });
   }
 
-  it('atomically fires the callback after execution', jQueryTest);
+  it('atomically fires the callback after execution', jQueryTest, 180000);
   // OK, now do the same thing again. Should be cool, right?
-  it('runs the exact same test again for good measure', jQueryTest);
+  it('runs the exact same test again for good measure', jQueryTest, 180000);
 
   /**
    * Checks for serial script loading behavior. Some loaders are able to pass
@@ -81,14 +79,13 @@ describe('loadScript', function() {
    * totally cheating.
    */
   it('loads scripts in parallel / does not queue', function(done) {
-    this.timeout(180000);
     var order = [];
     function checkDone(version) {
       order.push(version);
       if (order.length === 2) {
         try {
-          expect(order[0]).to.equal('1.7.2');
-          expect(order[1]).to.equal('1.8.3');
+          expect(order[0]).toEqual('1.7.2');
+          expect(order[1]).toEqual('1.8.3');
           done();
         } catch(err) {
           done(err);
@@ -108,5 +105,5 @@ describe('loadScript', function() {
         checkDone('1.7.2');
       });
     });
-  });
+  }, 180000);
 });

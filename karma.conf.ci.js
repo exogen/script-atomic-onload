@@ -25,10 +25,10 @@ module.exports = function(config) {
       SL_Safari_iPhone: {
         base: 'SauceLabs',
         browserName: 'Safari',
-        appiumVersion: '1.5.3',
-        deviceName: 'iPhone 6s Device',
+        appiumVersion: '1.6.4',
+        deviceName: 'iPhone Simulator',
         deviceOrientation: 'portrait',
-        platformVersion: '9.3',
+        platformVersion: '10.2',
         platformName: 'iOS'
       },
       SL_IE8: {

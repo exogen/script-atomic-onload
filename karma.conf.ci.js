@@ -7,57 +7,58 @@ module.exports = function(config) {
       SL_Chrome: {
         base: 'SauceLabs',
         browserName: 'chrome',
-        version: '46',
-        platform: 'OS X 10.11'
+        version: '57.0',
+        platform: 'macOS 10.12'
       },
       SL_Firefox: {
         base: 'SauceLabs',
         browserName: 'firefox',
-        version: '42',
+        version: '52.0',
         platform: 'Windows 10'
       },
       SL_Safari: {
         base: 'SauceLabs',
         browserName: 'safari',
-        version: '9',
-        platform: 'OS X 10.11'
+        version: '10.0',
+        platform: 'macOS 10.12'
       },
       SL_Safari_iPhone: {
         base: 'SauceLabs',
-        browserName: 'iphone',
-        version: '9.2',
-        platform: 'OS X 10.10',
-        deviceName: 'iPhone 6',
-        deviceOrientation: 'portrait'
+        browserName: 'Safari',
+        appiumVersion: '1.5.3',
+        deviceName: 'iPhone 6s Device',
+        deviceOrientation: 'portrait',
+        platformVersion: '9.3',
+        platformName: 'iOS'
       },
       SL_IE8: {
         base: 'SauceLabs',
         browserName: 'internet explorer',
-        version: '8',
+        version: '8.0',
         platform: 'Windows XP'
       },
       SL_IE9: {
         base: 'SauceLabs',
         browserName: 'internet explorer',
-        version: '9',
+        version: '9.0',
         platform: 'Windows 7'
       },
       SL_IE10: {
         base: 'SauceLabs',
         browserName: 'internet explorer',
-        version: '10',
+        version: '10.0',
         platform: 'Windows 8'
       },
       SL_IE11: {
         base: 'SauceLabs',
         browserName: 'internet explorer',
-        version: '11',
+        version: '11.103',
         platform: 'Windows 10'
       },
       SL_Edge: {
         base: 'SauceLabs',
         browserName: 'MicrosoftEdge',
-        version: '20.10240',
+        version: '14.14393',
         platform: 'Windows 10'
       }
     },

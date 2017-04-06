@@ -7,10 +7,10 @@ module.exports = {
     noParse: [
       path.join(__dirname, 'vendor')
     ],
-    rules: [
+    loaders: [
       {
         include: path.join(__dirname, 'vendor'),
-        use: 'imports-loader?this=>window'
+        loader: 'imports-loader?this=>window'
       },
       {
         include: require.resolve('./vendor/curl-with-js-domReady-legacy'),

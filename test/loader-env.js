@@ -1,1 +1,1 @@
-module.exports = process.env.TEST_LOADER || "script-atomic-onload";
+module.exports = process.env.TEST_LOADER || 'script-atomic-onload';

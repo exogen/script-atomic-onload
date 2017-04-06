@@ -1,7 +1,7 @@
-var expect = require("expect.js"); // Can't use Chai due to IE8.
-var loadScript = require("../loader");
+var expect = require('expect.js'); // Can't use Chai due to IE8.
+var loadScript = require('../loader');
 
-describe("loadScript", function() {
+describe('loadScript', function() {
   /**
    * Load 10 instances of jQuery in parallel. (There won't actually be 10
    * in-flight requests due to the browser's per-domain connection limit, but
@@ -37,41 +37,41 @@ describe("loadScript", function() {
         done(err);
       }
     }
-    loadScript("http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js", function() {
-      checkDone("1.11.3");
+    loadScript('http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', function() {
+      checkDone('1.11.3');
     });
-    loadScript("http://code.jquery.com/jquery-1.11.3.min.js", function() {
-      checkDone("1.11.3");
+    loadScript('http://code.jquery.com/jquery-1.11.3.min.js', function() {
+      checkDone('1.11.3');
     });
-    loadScript("http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js", function() {
-      checkDone("1.11.2");
+    loadScript('http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', function() {
+      checkDone('1.11.2');
     });
-    loadScript("http://code.jquery.com/jquery-1.11.2.min.js", function() {
-      checkDone("1.11.2");
+    loadScript('http://code.jquery.com/jquery-1.11.2.min.js', function() {
+      checkDone('1.11.2');
     });
-    loadScript("http://code.jquery.com/jquery-1.7.2.min.js", function() {
-      checkDone("1.7.2");
+    loadScript('http://code.jquery.com/jquery-1.7.2.min.js', function() {
+      checkDone('1.7.2');
     });
-    loadScript("http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", function() {
-      checkDone("1.11.1");
+    loadScript('http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', function() {
+      checkDone('1.11.1');
     });
-    loadScript("http://code.jquery.com/jquery-1.11.1.min.js", function() {
-      checkDone("1.11.1");
+    loadScript('http://code.jquery.com/jquery-1.11.1.min.js', function() {
+      checkDone('1.11.1');
     });
-    loadScript("http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", function() {
-      checkDone("1.7.2");
+    loadScript('http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', function() {
+      checkDone('1.7.2');
     });
-    loadScript("http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js", function() {
-      checkDone("1.11.3");
+    loadScript('http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', function() {
+      checkDone('1.11.3');
     });
-    loadScript("http://code.jquery.com/jquery-1.11.3.min.js", function() {
-      checkDone("1.11.3");
+    loadScript('http://code.jquery.com/jquery-1.11.3.min.js', function() {
+      checkDone('1.11.3');
     });
   }
 
-  it("atomically fires the callback after execution", jQueryTest);
+  it('atomically fires the callback after execution', jQueryTest);
   // OK, now do the same thing again. Should be cool, right?
-  it("runs the exact same test again for good measure", jQueryTest);
+  it('runs the exact same test again for good measure', jQueryTest);
 
   /**
    * Checks for serial script loading behavior. Some loaders are able to pass
@@ -80,32 +80,32 @@ describe("loadScript", function() {
    * Instead, they add scripts to a queue and load them serially, which is
    * totally cheating.
    */
-  it("loads scripts in parallel / does not queue", function(done) {
+  it('loads scripts in parallel / does not queue', function(done) {
     this.timeout(180000);
     var order = [];
     function checkDone(version) {
       order.push(version);
       if (order.length === 2) {
         try {
-          expect(order[0]).to.equal("1.7.2");
-          expect(order[1]).to.equal("1.8.3");
+          expect(order[0]).to.equal('1.7.2');
+          expect(order[1]).to.equal('1.8.3');
           done();
         } catch(err) {
           done(err);
         }
       }
     }
-    loadScript("http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", function() {
+    loadScript('http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', function() {
       // OK, the cache should be primed with this version. Now load an uncached
       // version and then this version again. If the uncached version loads
       // first, the loader must be queuing, not loading in parallel.
 
       // Bust cache just in case this version was used in another test.
-      loadScript("http://code.jquery.com/jquery-1.8.3.js?bustin=makesmefeelgood", function() {
-        checkDone("1.8.3");
+      loadScript('http://code.jquery.com/jquery-1.8.3.js?bustin=makesmefeelgood', function() {
+        checkDone('1.8.3');
       });
-      loadScript("http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", function() {
-        checkDone("1.7.2");
+      loadScript('http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', function() {
+        checkDone('1.7.2');
       });
     });
   });

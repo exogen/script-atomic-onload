@@ -1,5 +1,5 @@
-const webpack = require('webpack');
-const path = require('path');
+var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -7,7 +7,7 @@ module.exports = {
     noParse: [
       path.join(__dirname, 'vendor')
     ],
-    loaders: [
+    rules: [
       {
         include: path.join(__dirname, 'vendor'),
         loader: 'imports-loader?this=>window'

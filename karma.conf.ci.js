@@ -1,7 +1,7 @@
 var TEST_LOADER = require('./test/loader-env');
 
 module.exports = function(config) {
-  require("./karma.conf")(config);
+  require('./karma.conf')(config);
   config.set({
     customLaunchers: {
       SL_Chrome: {
@@ -76,8 +76,8 @@ module.exports = function(config) {
     sauceLabs: {
       testName: 'Script Loader Tests: ' + TEST_LOADER,
       tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
-      startConnect: process.env.TRAVIS !== "true",
-      tags: ["TEST_LOADER=" + TEST_LOADER]
+      startConnect: process.env.TRAVIS !== 'true',
+      tags: ['TEST_LOADER=' + TEST_LOADER]
     },
     captureTimeout: 0,
     browserDisconnectTimeout: 180000,

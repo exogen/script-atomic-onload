@@ -9,7 +9,7 @@ module.exports = function(src, callback) {
   // URL again, we need to load with a new context.
   var id = (++counter).toString();
   var shim = {};
-  shim[src] = { deps: [], exports: "window" };
+  shim[src] = { deps: [], exports: 'window' };
   var _requirejs = requirejs.config({ context: id, shim: shim });
   _requirejs([src], callback);
 };

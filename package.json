@@ -7,6 +7,9 @@
     "test": "karma start",
     "test-ci": "karma start ./karma.conf.ci.js"
   },
+  "engines": {
+    "node": ">=4.3.0 <5.0.0 || >=5.10"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/exogen/script-atomic-onload.git"
@@ -26,25 +29,24 @@
   },
   "homepage": "https://github.com/exogen/script-atomic-onload",
   "devDependencies": {
-    "expect.js": "^0.3.1",
     "exports-loader": "^0.6.2",
     "getscript": "^0.1.0",
-    "imports-loader": "^0.6.5",
-    "karma": "^1.1.1",
-    "karma-chrome-launcher": "^1.0.1",
+    "imports-loader": "^0.7.1",
+    "jasmine-core": "^2.5.2",
+    "karma": "<1.4.0",
+    "karma-chrome-launcher": "^2.0.0",
     "karma-firefox-launcher": "^1.0.0",
-    "karma-mocha": "^1.1.1",
+    "karma-jasmine": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.1",
     "karma-phantomjs-shim": "^1.1.2",
     "karma-safari-launcher": "^1.0.0",
     "karma-sauce-launcher": "^1.0.0",
     "karma-sourcemap-loader": "^0.3.6",
-    "karma-webpack": "^1.7.0",
+    "karma-webpack": "^2.0.3",
     "kist-loader": "^0.4.7",
-    "little-loader": "^0.1.0",
+    "little-loader": "^0.2.0",
     "load-script": "^1.0.0",
     "loads-js": "^1.0.0",
-    "mocha": "^2.3.3",
     "phantomjs-prebuilt": "^2.1.7",
     "pyrsmk-toast": "^2.1.1",
     "script-load": "^0.1.0",
@@ -52,6 +54,6 @@
     "scriptinclude": "^1.1.1",
     "scriptjs": "^2.5.8",
     "scriptload": "^0.2.0",
-    "webpack": "^1.12.8"
+    "webpack": "^2.3.3"
   }
 }

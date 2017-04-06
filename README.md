@@ -35,6 +35,8 @@ Introducing…
 
 # script-atomic-onload
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/exogen/script-atomic-onload.svg)](https://greenkeeper.io/)
+
 A build matrix of every script loader ever made.
 
 This project tests script loaders for atomic `onload` support, which is the

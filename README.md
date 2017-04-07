@@ -51,12 +51,14 @@ been adopted in the production-ready [little-loader][little-loader] module.
 Yes, calling `onload` *immediately* (aka synchronously or atomically) after a
 `<script>` has executed is the correct and officially defined behavior. So
 what’s the problem? **Internet Explorer.** Below version 10, getting this
-behavior requires you jump through some hoops. Some script loaders just don’t
-try; for example, [jQuery’s `getScript`][jquery] does not make this
+behavior requires you jump through some hoops. **Even if you don’t support
+Internet Explorer, your script loader may be breaking your code in compliant
+browsers due to its faulty `onload` workarounds.** Some script loaders just
+don’t try; for example, [jQuery’s `getScript`][jquery] does not make this
 guarantee, documenting that “The callback is fired once the script has been
 loaded but not necessarily executed.” Those that do try often try *very hard*
-and end up being far too clever and still incorrect. In giving IE a pass on
-this behavior, many loaders have left other browsers broken as well.
+and end up being too clever and still incorrect. In giving IE a pass on this
+behavior, many loaders have left other browsers broken as well.
 
 If you haven’t designed for it by bundling all your code or using a system
 like AMD, having other code run in between your script and its `onload`

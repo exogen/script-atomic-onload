@@ -19,8 +19,14 @@ module.exports = function(config) {
       SL_Safari: {
         base: 'SauceLabs',
         browserName: 'safari',
-        version: '10.0',
+        version: '10.1',
         platform: 'macOS 10.12'
+      },
+      SL_Safari_9: {
+        base: 'SauceLabs',
+        browserName: 'safari',
+        version: '9.0',
+        platform: 'OS X 10.11'
       },
       SL_Safari_iPhone: {
         base: 'SauceLabs',
@@ -66,6 +72,7 @@ module.exports = function(config) {
       'SL_Chrome',
       'SL_Firefox',
       'SL_Safari',
+      'SL_Safari_9',
       'SL_Safari_iPhone',
       'SL_IE8',
       'SL_IE9',
